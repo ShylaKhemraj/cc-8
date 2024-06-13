@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Registration Portal</title>
+        <style>
+            .registration-details {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Register for the event</h1>
+
+        <form action="submit_registration.php" method="post">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="event-date"> Event Date:</label>
+            <select id="event-date" name="event-date" required>
+                <option value="08-06-2025">August 06, 2025</option>
+                <option value="02/25/2026">February 25, 2026</option>
+                <option value="11/06/2026">November 06, 2026</option>
+            </select><br><br>
+
+            <label>Meal Preference:</label>
+            <input type="checkbox" id="vegetarian" name="meal-preference" value="Vegetarian">
+            <label for="vegetarian">Vegetarian</label><br>
+            <input type="checkbox" id=" non-vegetarian" name="meal-preference" value="Non-Vegetarian">
+            <label for="non-vegetarian">Non-Vegetarian</label><br>
+            <input type="checkbox" id="vegan" name="meal-preference" value="Vegan">
+            <label for="vegan">Vegan</label><br><br>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+        <div id="registration-details">
+            <h2>Registration Details</h2>
+            <p><strong>Name:</strong> <span id="display-name"></span></p>
+            <p><strong>Email:</strong> <span id="display-email"></span></p>
+            <p><strong>Event Date:</strong> <span id="display-event-date"></span></p>
+            <P><strong>Meal Preference:</strong> <span id="display-meal-preference"></span></P>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
